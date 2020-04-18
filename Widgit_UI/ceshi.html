@@ -70,7 +70,7 @@
             <a class="button" tapmode="active" onclick="show()">界面回来</a>
             <a class="button" tapmode="active" onclick="close()">界面关闭</a>
             <a class="button" tapmode="active" onclick="stop()">停止播放</a>
-            <a class="button" tapmode="active" onclick="addMusic()">添加单条音乐</a>
+            <a class="button" tapmode="active" onclick="addMusic1()">添加单条音乐</a>
             <a class="button" tapmode="active" onclick="selectMusic()">指定某条音乐播放</a>
             <a class="button" tapmode="active" onclick="getCurrentPlayer()">获取当前播放音乐信息</a>
 
@@ -92,16 +92,19 @@
             alert("getCurrentPlayer|" + JSON.stringify(ret));
         });
     }
+    
+    function addMusic1(){
+      addMusic(na,fn,ser,oth);
+    }
 
-
-    function addMusic(na,fn,ser,oth) {
+    function addMusic(na1,fn1,ser1,oth1) {
        demo.addMusic({
            data: {
-               name: na,
-               filename: fn,
-               singer: ser,
+               name: na1,
+               filename: fn1,
+               singer: ser1,
                icon: "http://p1.music.126.net/CjOOps_aDbNVz0JpWyfB5Q==/109951163027939634.jpg?param=130y130",
-               other: oth,
+               other: oth1,
                fenxiangSum: 3,
                downmusicSum: 33,
                pinglunSum: 44,
