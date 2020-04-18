@@ -70,7 +70,7 @@
             <a class="button" tapmode="active" onclick="show()">界面回来</a>
             <a class="button" tapmode="active" onclick="close()">界面关闭</a>
             <a class="button" tapmode="active" onclick="stop()">停止播放</a>
-            <a class="button" tapmode="active" onclick="addMusic(na,fn,ser,oth)">添加单条音乐</a>
+            <a class="button" tapmode="active" onclick="addMusic()">添加单条音乐</a>
             <a class="button" tapmode="active" onclick="selectMusic()">指定某条音乐播放</a>
             <a class="button" tapmode="active" onclick="getCurrentPlayer()">获取当前播放音乐信息</a>
 
@@ -94,7 +94,7 @@
     }
 
 
-    function addMusic(na,fn,ser,oth) {
+    /*function addMusic(na,fn,ser,oth) {
        demo.addMusic({
            data: {
                name: na,
@@ -110,14 +110,14 @@
        }, function(ret, err) {
            alert("addMusic|" + JSON.stringify(ret));
        });
-    }
-    /*function addMusic() {
+    }*/
+    function addMusic() {
         demo.addMusic({
             data: {
-                name: "小苹果3666(widget://)",
-                filename: "widget://res/MP3s/cemo111.mp3",
-                singer: "666666",
-                icon: "widget://res/Images/1.jpg",
+                name: "起风了",
+                filename: "http://music.163.com/song/media/outer/url?id=1330348068.mp3",
+                singer: "买辣椒也用卷",
+                icon: "http://p1.music.126.net/CjOOps_aDbNVz0JpWyfB5Q==/109951163027939634.jpg?param=130y130",
                 other: 5,
                 fenxiangSum: 3,
                 downmusicSum: 33,
@@ -127,7 +127,7 @@
         }, function(ret, err) {
             alert("addMusic|" + JSON.stringify(ret));
         });
-    }*/
+    }
 
     function selectMusic() {
         netplay();
