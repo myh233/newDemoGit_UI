@@ -70,7 +70,7 @@
             <a class="button" tapmode="active" onclick="show()">界面回来</a>
             <a class="button" tapmode="active" onclick="close()">界面关闭</a>
             <a class="button" tapmode="active" onclick="stop()">停止播放</a>
-            <a class="button" tapmode="active" onclick="addMusic()">添加单条音乐</a>
+            <a class="button" tapmode="active" onclick="addMusic(na,fn,ser,oth)">添加单条音乐</a>
             <a class="button" tapmode="active" onclick="selectMusic()">指定某条音乐播放</a>
             <a class="button" tapmode="active" onclick="getCurrentPlayer()">获取当前播放音乐信息</a>
 
@@ -82,6 +82,10 @@
 </body>
 <script>
     var demo;
+    var na = "'起风了'";
+    var fn = "'http://music.163.com/song/media/outer/url?id=1330348068.mp3'";
+    var ser="'买辣椒也用卷'";
+    var oth = 1;
 
     function getCurrentPlayer() {
         demo.getCurrentPlayer(function(ret, err) {
@@ -89,7 +93,25 @@
         });
     }
 
-    function addMusic() {
+
+    function addMusic(na,fn,ser,oth) {
+       demo.addMusic({
+           data: {
+               name: na,
+               filename: fn,
+               singer: ser,
+               icon: "http://p1.music.126.net/CjOOps_aDbNVz0JpWyfB5Q==/109951163027939634.jpg?param=130y130",
+               other: oth,
+               fenxiangSum: 3,
+               downmusicSum: 33,
+               pinglunSum: 44,
+               background: "http://7xwc0t.com1.z0.glb.clouddn.com/apicloud/3a3d926564ab4c5b2292744d5ffb0ec6.jpg"
+           }
+       }, function(ret, err) {
+           alert("addMusic|" + JSON.stringify(ret));
+       });
+    }
+    /*function addMusic() {
         demo.addMusic({
             data: {
                 name: "小苹果3666(widget://)",
@@ -105,11 +127,11 @@
         }, function(ret, err) {
             alert("addMusic|" + JSON.stringify(ret));
         });
-    }
+    }*/
 
     function selectMusic() {
         demo.selectMusic({
-            index: 4
+            other:1
         }, function(ret, err) {
             alert("selectMusic|" + JSON.stringify(ret));
         });
@@ -122,7 +144,7 @@
                 filename: "http://7xwc0t.com1.z0.glb.clouddn.com/apicloud/619a3762a2be7650c4345c1d7c23575e.mp3",
                 singer: "筷子兄弟",
                 icon: "http://7xwc0t.com1.z0.glb.clouddn.com/apicloud/3a3d926564ab4c5b2292744d5ffb0ec6.jpg",
-                other: 1,
+                other: 2,
                 fenxiangSum: 43,
                 downmusicSum: 12,
                 pinglunSum: 45,
@@ -132,7 +154,7 @@
                 filename: "http://7xwc0t.com1.z0.glb.clouddn.com/apicloud/28643b3e661abe4dfb3da33f2d1e2b59.mp3",
                 singer: "筷子兄弟",
                 icon: "http://7xwc0t.com1.z0.glb.clouddn.com/apicloud/7c23cd15fc8fe841ab20f6c87d47ae59.jpg",
-                other: 2,
+                other: 3,
                 fenxiangSum: 55,
                 downmusicSum: 66,
                 pinglunSum: 233,
@@ -142,7 +164,7 @@
                 filename: "widget://res/MP3s/cemo111.mp3",
                 singer: "筷子兄弟",
                 icon: "widget://res/Images/1.jpg",
-                other: 3,
+                other: 4,
                 fenxiangSum: 123,
                 downmusicSum: 889,
                 pinglunSum: 233,
@@ -152,7 +174,7 @@
                 filename: "fs://shangxuege.mp3",
                 singer: "王菲",
                 icon: "widget://res/Images/nanquan@2x.jpg",
-                other: 4,
+                other: 5,
                 fenxiangSum: 123,
                 downmusicSum: 889,
                 pinglunSum: 233,
