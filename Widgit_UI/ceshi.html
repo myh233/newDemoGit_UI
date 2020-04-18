@@ -71,6 +71,7 @@
             <a class="button" tapmode="active" onclick="close()">界面关闭</a>
             <a class="button" tapmode="active" onclick="stop()">停止播放</a>
             <a class="button" tapmode="active" onclick="addMusic1()">添加单条音乐</a>
+            <a class="button" tapmode="active" onclick="addMusic2()">添加条音乐</a>
             <a class="button" tapmode="active" onclick="selectMusic()">指定某条音乐播放</a>
             <a class="button" tapmode="active" onclick="getCurrentPlayer()">获取当前播放音乐信息</a>
 
@@ -92,7 +93,7 @@
             alert("getCurrentPlayer|" + JSON.stringify(ret));
         });
     }
-    
+
     function addMusic1(){
       addMusic(na,fn,ser,oth);
     }
@@ -114,7 +115,7 @@
            alert("addMusic|" + JSON.stringify(ret));
        });
     }
-    /*function addMusic() {
+    function addMusic2() {
         demo.addMusic({
             data: {
                 name: "起风了",
@@ -130,7 +131,7 @@
         }, function(ret, err) {
             alert("addMusic|" + JSON.stringify(ret));
         });
-    }*/
+    }
 
     function selectMusic() {
         demo.selectMusic({
