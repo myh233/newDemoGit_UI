@@ -83,10 +83,11 @@
 </body>
 <script>
     var demo;
-    var na = "'起风了'";
-    var fn = "'http://music.163.com/song/media/outer/url?id=1330348068.mp3'";
-    var ser="'买辣椒也用卷'";
+    var na = "起风了";
+    var fn = "http://music.163.com/song/media/outer/url?id=1330348068.mp3";
+    var ser="买辣椒也用卷";
     var oth = 1;
+    var id = 1330348068;
 
     function getCurrentPlayer() {
         demo.getCurrentPlayer(function(ret, err) {
@@ -102,7 +103,7 @@
        demo.addMusic({
            data: {
                name: na1,
-               filename:"http://music.163.com/song/media/outer/url?id=1330348068.mp3",
+               filename:fn,
                singer: ser1,
                icon: "http://p1.music.126.net/CjOOps_aDbNVz0JpWyfB5Q==/109951163027939634.jpg?param=130y130",
                other: oth1,
