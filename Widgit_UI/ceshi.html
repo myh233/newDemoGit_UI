@@ -72,7 +72,8 @@
             <a class="button" tapmode="active" onclick="stop()">停止播放</a>
             <a class="button" tapmode="active" onclick="addMusic1()">添加单条音乐</a>
             <a class="button" tapmode="active" onclick="addMusic2()">添加条音乐</a>
-            <a class="button" tapmode="active" onclick="selectMusic()">指定某条音乐播放</a>
+            <a class="button" tapmode="active" onclick="selectMusic_1()">指定某条音乐播放</a>
+            <a class="button" tapmode="active" onclick="selectMusic_2()">指定某条音乐播放</a>
             <a class="button" tapmode="active" onclick="getCurrentPlayer()">获取当前播放音乐信息</a>
 
             <a class="button" tapmode="active" onclick="musicPlayPause()">播放或者暂停</a>
@@ -120,10 +121,10 @@
         demo.addMusic({
             data: {
                 name: "起风了",
-                filename: "http://music.163.com/song/media/outer/url?id=1330348068.mp3",
-                singer: "买辣椒也用卷",
+                filename: "http://music.163.com/song/media/outer/url?id=1338695683.mp3",
+                singer: "吴青峰",
                 icon: "http://p1.music.126.net/CjOOps_aDbNVz0JpWyfB5Q==/109951163027939634.jpg?param=130y130",
-                other: 1,
+                other: 2,
                 fenxiangSum: 3,
                 downmusicSum: 33,
                 pinglunSum: 44,
@@ -134,9 +135,17 @@
         });
     }
 
-    function selectMusic() {
+    function selectMusic_1() {
         demo.selectMusic({
             other:1
+        }, function(ret, err) {
+            alert("selectMusic|" + JSON.stringify(ret));
+        });
+    }
+
+    function selectMusic_2() {
+        demo.selectMusic({
+            other:2
         }, function(ret, err) {
             alert("selectMusic|" + JSON.stringify(ret));
         });
