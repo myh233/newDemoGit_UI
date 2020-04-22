@@ -3,16 +3,10 @@
     <description>
         Example For APICloud.
     </description>
-    <!--百度身份识别测试-->
-    <feature name="baiduIdentifyOCR">
-          <param name="APIKey" value="E9v68McXyNIwqz4X846UmaPo"/>
-          <param name="SecretKey" value="7tnauoLn6QwKKPOaMH0APWMaiSFK3cby"/>
-    </feature>
-
     <author email="developer@apicloud.com" href="http://www.apicloud.com">
         Developer
     </author>
-    <content src="shibie.html" />
+    <content src="ceshi.html" />
     <access origin="*" />
     <preference name="pageBounce" value="false"/>
 	<preference name="appBackground" value="rgba(0,0,0,0.0)"/>
